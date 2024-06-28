@@ -9,5 +9,6 @@ services:
     image: louislam/uptime-kuma:latest
     volumes:
       - uptime-data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
 volumes:
   uptime-data:
