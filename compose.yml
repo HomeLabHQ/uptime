@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  uptime:
+    container_name: uptime
+    env_file:
+      - .env
+    ports:
+      - ${SERVICE_PORT}:3001
+    image: louislam/uptime-kuma:latest
+    volumes:
+      - uptime-data:/data
+volumes:
+  uptime-data:
